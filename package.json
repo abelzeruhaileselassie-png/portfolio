@@ -1,0 +1,23 @@
+{
+  "name": "assignment",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/abelzeruhaileselassie-png/portfolio#readme",
+  "bugs": {
+    "url": "https://github.com/abelzeruhaileselassie-png/portfolio/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abelzeruhaileselassie-png/portfolio.git"
+  },
+  "license": "ISC",
+  "author": "Abel",
+  "type": "commonjs",
+  "main": "commerce.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "mime-types": "^3.0.2"
+  }
+}
