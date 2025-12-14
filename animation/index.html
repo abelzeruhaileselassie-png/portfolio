@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .top, .bottom{
+            width: 100%;
+            height: 40px;
+            background-color: aquamarine;
+        }
+        .slide{
+            width: 7000px;
+            height: 80vh;
+            margin: 20px;
+            overflow-x: hidden;
+            display: flex;
+            gap: 20px;
+            flex-shrink: 0;
+            animation: slid 15s linear infinite;
+            animation-delay: 5s;
+        }
+        .slide:hover{
+            animation-play-state: paused;
+        }
+        .left, .right{
+            width: 8vw;
+            height: 80vh;
+            background-color:white;
+            position: absolute;
+            opacity: 0.7;
+        }
+        .right{
+         right: 0;   
+        }
+        .left{
+            left: 0;
+        }
+        img{
+            width:700px ;
+            height: 80vh;
+            
+        }
+        @keyframes slid {
+          0%{ transform:translateX(0);}
+          100%{ transform: translateX(-3500px);}
+        }
+    </style>
+</head>
+<body>
+    <section class="top"></section>
+    <section class="slide">
+        <div class="left"></div>
+        <div class="mid">
+            <img src="./pexels-mastercowley-1128797.jpg" alt="">
+            <img src="./pexels-philippedonn-1133957.jpg" alt="">
+            <img src="./pexels-pixabay-158063.jpg" alt="">
+            <img src="./pexels-pixabay-247599.jpg" alt="">
+            <img src="./pexels-pixabay-68507.jpg" alt="">
+             <img src="./pexels-mastercowley-1128797.jpg" alt="">
+            <img src="./pexels-philippedonn-1133957.jpg" alt="">
+            <img src="./pexels-pixabay-158063.jpg" alt="">
+            <img src="./pexels-pixabay-247599.jpg" alt="">
+            <img src="./pexels-pixabay-68507.jpg" alt="">
+        </div>
+        <div class="right"></div>
+    </section>
+    <section class="bottom"></section>
+</body>
+</html>

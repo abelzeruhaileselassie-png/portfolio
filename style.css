@@ -1,0 +1,38 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #161212;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: larger;
+}
+h1{
+    color: azure;
+}
+li{
+    background-color: gold;
+    padding: 30px 100px;   
+}
+a{
+    text-decoration: none;
+    color: hsl(196, 95%, 55%);
+}
+a:hover{
+    color: blue;
+}
+a:visited{
+    color: azure;
+}
+a:focus{
+    outline: #0e7af6;
+}
+.sp{
+    background-color: rgb(151, 241, 16);
+}
+.au{
+    background-color: rgb(236, 159, 17);
+}
+.wi{
+    background-color: #0e7af6;
+}

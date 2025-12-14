@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown to HTML Converter</title>
+   <style>
+    /* Global Reset and Base Styling */
+:root {
+    --bg-color: #f4f4f9;
+    --panel-bg: #ffffff;
+    --border-color: #ccc;
+    --header-color: #333;
+    --font-family: 'Arial', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--header-color);
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+/* Main Container Layout (Default: Stacked) */
+#container {
+    display: block; /* Default to block/stacked on small screens */
+    padding: 20px;
+}
+
+/* Panel Styling */
+.panel {
+    background-color: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Textarea Input */
+#markdown-input {
+    width: 100%;
+    min-height: 200px;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: monospace;
+    resize: vertical;
+}
+
+/* Output Areas */
+.output-area {
+    min-height: 200px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow-y: auto;
+    background-color: #fafafa;
+}
+
+/* Specific styling for Raw HTML Output */
+#html-output {
+    font-family: monospace;
+    font-size: 13px;
+    /* Ensure raw HTML output wraps nicely */
+    white-space: pre-wrap; 
+    word-wrap: break-word;
+}
+
+/* Responsive Layout for Larger Screens */
+@media (min-width: 600px) {
+    #container {
+        display: flex;
+        gap: 20px;
+        align-items: stretch; /* Stretch items to equal height */
+    }
+
+    .panel {
+        flex: 1; /* Distribute space equally */
+        margin-bottom: 0;
+    }
+
+    #markdown-input, 
+    .output-area {
+        min-height: 400px; /* Increased height for better visibility */
+    }
+}
+   </style>
+</head>
+<body>
+    <header>
+        <h1>Markdown to HTML Converter</h1>
+    </header>
+
+    <main id="container">
+        <section class="panel input-panel">
+            <h2>Markdown Input</h2>
+            <textarea id="markdown-input" placeholder="Type your Markdown here..."></textarea>
+        </section>
+
+        <section class="panel output-panel">
+            <h2>Raw HTML Output</h2>
+            <div id="html-output" class="output-area"></div>
+        </section>
+
+        <section class="panel output-panel">
+            <h2>HTML Preview</h2>
+            <div id="preview" class="output-area"></div>
+        </section>
+    </main>
+
+    <script src="md.js"></script>
+</body>
+</html>

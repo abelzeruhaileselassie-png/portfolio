@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Stats - Arsenal Footbal Club</title>
+    <link rel="stylesheet" href="./styl.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <img src="./downloa.png" alt="" width="170px" height="100px">
+            <h1 class="title">Team stats</h1>
+            <div class="team-info">
+                <span id="team-name">Team: Arsenal Football Club</span>
+                <span id="team-year">Year: 2025</span>
+                <span id="head-coach">Head coach: Mikel Arteta</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="filter-section">
+                <label for="position-filter">Filter Teammates:</label>
+                <select id="position-filter">
+                    <option value="all">All Teammates</option>
+                    <option value="forward">Forward</option>
+                    <option value="midfielder">Midfielder</option>
+                    <option value="defender">Defender</option>
+                    <option value="goalkeeper">Goalkeeper</option>
+                </select>
+            </div>
+            <div id="player-cards" class="player-grid">
+                </div>
+        </main>
+    </div>
+
+    <script src="./scr6.js"></script>
+</body>
+</html>
